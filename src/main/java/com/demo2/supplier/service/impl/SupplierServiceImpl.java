@@ -33,9 +33,13 @@ public class SupplierServiceImpl implements SupplierService {
 		return dao.load(id, supplier);
 	}
 	@Override
-	public List<Supplier> listOfSupplier() {
+	public List<Supplier> listOfSuppliers() {
 		Supplier supplier = new Supplier();
 		return dao.loadAll(supplier);
 	}
-
+	@Override
+	public List<Supplier> loadSuppliers(List<Long> ids) {
+		Supplier supplier = new Supplier();
+		return dao.loadForList(ids, supplier);
+	}
 }
