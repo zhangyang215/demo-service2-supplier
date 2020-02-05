@@ -16,7 +16,7 @@ public interface SupplierService {
 	 * @param id
 	 * @return the supplier
 	 */
-	public Supplier loadSupplier(long id);
+	public Supplier loadSupplier(Long id);
 	/**
 	 * @param ids
 	 * @return

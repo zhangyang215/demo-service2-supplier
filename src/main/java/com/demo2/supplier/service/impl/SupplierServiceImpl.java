@@ -28,7 +28,7 @@ public class SupplierServiceImpl implements SupplierService {
 		this.dao = dao;
 	}
 	@Override
-	public Supplier loadSupplier(long id) {
+	public Supplier loadSupplier(Long id) {
 		Supplier supplier = new Supplier();
 		return dao.load(id, supplier);
 	}
