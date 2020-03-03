@@ -335,4 +335,6 @@ public interface SupplierService {
 service-supplier:
 
 curl http://localhost:9004/orm/supplier/loadSupplier?id=20002
+
+curl http://localhost:9004/orm/supplier/listOfSuppliers
 ```
