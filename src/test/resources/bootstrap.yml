@@ -19,6 +19,7 @@ feign:
 logging:
   level:
     com.demo2.supplier: DEBUG
+    com.demo2.support: DEBUG
 
 ---
 spring:
@@ -27,7 +28,7 @@ spring:
     enabled: false
   datasource:
     url: jdbc:mysql://47.105.194.89:32306/demo
-    username: root
+    username: demo
     password: 1234
     type: com.alibaba.druid.pool.DruidDataSource
   redis:
@@ -46,18 +47,7 @@ server:
 
 eureka:
   client:
+    registerWithEureka: false
+    fetchRegistry: false
     serviceUrl:
       defaultZone: http://localhost:9001/eureka/
----
-spring:
-  profiles: docker
-
-server:
-  port: ${SERVICE_PORT:9004}
-
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    service-url:
-      defaultZone: ${REGISTRY_URL}
