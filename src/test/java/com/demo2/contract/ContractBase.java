@@ -1,7 +1,7 @@
 /*
  * Created by 2020-05-03 20:35:13 
  */
-package com.demo2;
+package com.demo2.contract;
 
 import org.junit.Before;
 import org.junit.runner.RunWith;
